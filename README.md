@@ -35,7 +35,7 @@
 .
 ├── provider.tf      # AWS 프로바이더 및 리전 설정 코드
 └── vpc.tf           # VPC, Subnet, Gateway, Route Table, Endpoint 정의 코드
-
+```
 
 ⚙️ 사용 명령어
 Terraform을 실행하고 관리하는 주요 명령어입니다.
