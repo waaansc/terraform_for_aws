@@ -12,11 +12,11 @@
 * **NAT Gateway & EIP (탄력적 IP):** Private Subnet의 리소스가 안전하게 외부 인터넷으로 나갈 수 있도록 하는 통로 제공
 * **S3 VPC Endpoint (Gateway Type):** Private Subnet의 리소스가 인터넷을 거치지 않고 AWS 내부망을 통해 S3 서비스에 안전하게 접근하도록 구성하여 보안 및 비용 효율성 확보
 
----
+***
 
 ## 🏗️ 네트워크 아키텍처 (VPC 구성 요약)
 
-| 리소스 | 역할 | 특징 |
+| **리소스** | **역할** | **특징** |
 | :--- | :--- | :--- |
 | **VPC (`aws_vpc`)** | 기본 네트워크 | CIDR: `10.0.0.0/16` |
 | **인터넷 게이트웨이 (`aws_igw`)** | VPC와 인터넷 연결 | Public Subnet의 아웃바운드 허용 |
@@ -25,24 +25,13 @@
 | **NAT Gateway** | Private Subnet의 아웃바운드 역할 | Public Subnet에 위치하며 EIP 사용 |
 | **S3 Endpoint** | AWS 서비스 내부 연결 | S3 접속 시 NAT GW 우회 및 비용 절감 |
 
----
+***
 
 ## 📁 파일 구조
 
 프로젝트의 핵심 인프라 정의 파일 구조입니다.
-.
-├── provider.tf      # AWS 프로바이더 및 리전 설정
-└── vpc.tf           # VPC, Subnet, Gateway, Route Table, Endpoint 정의 코드
-
-***
-
-## ⚙️ 사용 명령어
-
-Terraform을 실행하고 관리하는 주요 명령어입니다.
-
-### 1. 초기화 (Initialization)
-
-프로바이더 플러그인을 다운로드하고 작업 디렉토리를 초기화합니다.
 
 ```bash
-terraform init
+.
+├── provider.tf      # AWS 프로바이더 및 리전 설정 코드
+└── vpc.tf           # VPC, Subnet, Gateway, Route Table, Endpoint 정의 코드
