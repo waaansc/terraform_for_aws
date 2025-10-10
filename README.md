@@ -29,17 +29,18 @@ Terraform을 활용하여 GAIA 개발 환경 및 운영 환경에 필요한 핵�
 
 ```
 .
-├── modules/
-│   ├── vpc/             # VPC, Subnet 등 네트워크 모듈
-│   ├── ec2/             # EC2 인스턴스 및 관련 보안 그룹 모듈
-│   ├── s3/              # S3 버킷 및 정책 모듈
-│   └── iam/             # IAM 사용자, 역할, 정책 모듈
-├── envs/
-│   ├── dev/             # 개발 환경(Dev) 설정을 위한 파일
-│   └── prod/            # 운영 환경(Prod) 설정을 위한 파일 (TBD)
-├── main.tf              # 루트 모듈 (주요 리소스 통합)
-├── variables.tf         # 입력 변수 정의
-└── versions.tf          # Terraform 및 Provider 버전 정의
+├── IAM/
+│   ├── devops_group.tf             
+│   ├── iam_role_hello.tf            
+│   ├── provider.tf
+│   └── user_gildong_hong.tf      
+├── s3/
+│   ├── provider.tf             
+│   └── s3.tf      
+├── vpc/      
+│   ├── provider.tf             
+│   └── vpc.tf  
+
 ```
 
 -----
